@@ -1,0 +1,213 @@
+body {
+  background-image: url("taitol.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.a {
+  border-radius: 20px;
+  display: block;
+text-size-adjust: (Edge 79, Chrome 80, Opera 41);
+  width: 100px;
+  padding: 15px;
+  box-sizing: border-box;
+  background: #6fa1ff;
+  color: #FFF;
+  text-decoration: none;
+  text-align: center;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+/* 画像を中央に配置するためのスタイル */
+#paiContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 300px); /* Adjust the height to create a 120px space at the top */
+  position: relative;
+  z-index: 1;
+}
+
+/* 画面下部に牌を表示するコンテナのスタイル */
+.displayed-pai-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+}
+
+/* displayedPaiクラスのスタイル（画面下部の牌）*/
+.displayedPai {
+  width: 60px;
+  height: 80px;
+  background-size: contain;
+  margin: 5px;
+  z-index: 1;
+}
+
+#paiContainer>div {
+  display: inline-block;
+  width: 115px;
+  height: 160px;
+  background-repeat: no-repeat;
+  margin-top: 120px; /* Add 120px margin from the top */
+}
+
+.box {
+  width: 450px;
+  height: 300px;
+  position: absolute;
+  top: 50px;
+  left: 400px;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.525);
+}
+
+.box2 {
+  width: 950px;
+  height: 100px;
+  position: absolute;
+  bottom: 0px;
+  left: 150px;
+  background-color: rgba(0, 128, 0, 0.562)
+}
+
+/* 牌ごとの位置を指定 */
+.man1 {
+  background-image: url(牌画像1m.png);
+}
+
+.man2 {
+  background-image: url(牌画像2m.png);
+}
+
+.man3 {
+  background-image: url(牌画像3m.png);
+}
+
+.man4 {
+  background-image: url(牌画像4m.png);
+}
+
+.man5 {
+  background-image: url(牌画像5m.png);
+}
+
+.man6 {
+  background-image: url(牌画像6m.png);
+}
+
+.man7 {
+  background-image: url(牌画像7m.png);
+}
+
+.man8 {
+  background-image: url(牌画像8m.png);
+}
+
+.man9 {
+  background-image: url(牌画像9m.png);
+}
+
+.pin1 {
+  background-image: url(牌画像1p.png);
+}
+
+.pin2 {
+  background-image: url(牌画像2p.png);
+}
+
+.pin3 {
+  background-image: url(牌画像3p.png);
+}
+
+.pin4 {
+  background-image: url(牌画像4p.png);
+}
+
+.pin5 {
+  background-image: url(牌画像5p.jpg);
+}
+
+.pin6 {
+  background-image: url(牌画像6p.jpg);
+}
+
+.pin7 {
+  background-image: url(牌画像7p.jpg);
+}
+
+.pin8 {
+  background-image: url(牌画像8p.jpg);
+}
+
+.pin9 {
+  background-image: url(牌画像9p.jpg);
+}
+
+.sou1 {
+  background-image: url(牌画像1s.jpg);
+}
+
+.sou2 {
+  background-image: url(牌画像2s.jpg);
+}
+
+.sou3 {
+  background-image: url(牌画像3s.jpg);
+}
+
+.sou4 {
+  background-image: url(牌画像4s.jpg);
+}
+
+.sou5 {
+  background-image: url(牌画像5s.jpg);
+}
+
+.sou6 {
+  background-image: url(牌画像6s.jpg);
+}
+
+.sou7 {
+  background-image: url(牌画像7s.jpg);
+}
+
+.sou8 {
+  background-image: url(牌画像8s.jpg);
+}
+
+.sou9 {
+  background-image: url(牌画像9s.jpg);
+}
+
+.ji1 {
+  background-image: url(牌画像\ zi1.jpg);
+}
+
+.ji2 {
+  background-image: url(牌画像\ zi2.jpg);
+}
+
+.ji3 {
+  background-image: url(牌画像\ zi3.jpg);
+}
+
+.ji4 {
+  background-image: url(牌画像\ zi4.jpg);
+}
+
+.ji5 {
+  background-image: url(牌画像\ zi5.jpg);
+}
+
+.ji6 {
+  background-image: url(牌画像\ zi6.jpg);
+}
+
+.ji7 {
+  background-image: url(牌画像\ zi7.jpg);
+}
