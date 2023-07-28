@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>テトリス風ゲーム</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="text.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'DotGothic16', sans-serif;
+    }
+  </style>
+  <script src="index.js"></script>
+  <script>
+    window.onload = function () {
+      window.addEventListener('keydown', keydownfunc, true);
+    }
+
+    var keydownfunc = function (event) {
+      var code = event.keyCode;
+      switch (code) {
+        case 37: // ←
+        case 38: // ↑
+        case 39: // →
+        case 40: // ↓
+        case 32: // スペース
+          event.preventDefault();
+          console.log(code);
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <h1>テトリス風ゲーム</h1>
+  <div class="wrapper-container">
+    <span class="tetris-container">
+      <canvas id="stage" width="250px" height="500px" style="background-color:black;"></canvas>
+      <span class="tetris-panel-container">
+        <p>Next:</p>
+        <canvas id="next" width="150px" height="150px" style="background-color:black;"></canvas>
+        <p>LINES: <span id="lines">0</span></p>
+        <p><span id="message"></span></p>
+        <p>SCORE: <span id="score">0</span></p>
+        <div class="tetris-panel-container-padding"></div>
+        <table class="tetris-button-panel">
+          <tr>
+            <td id="tetris-rotate-button" class="tetris-button">回転＝ ↑</td>
+          </tr>
+          <tr>
+            <td id="tetris-move-left-button" class="tetris-button">左にずらす＝ ←</td>
+          </tr>
+          <tr>
+            <td id="tetris-move-right-button" class="tetris-button">右にずらす＝ →</td>
+          </tr>
+          <tr>
+            <td id="tetris-move-down-button" class="tetris-button">下にずらす＝ ↓</td>
+          </tr>
+          <tr>
+            <td id="tetris-fall-button" class="tetris-button">落下＝ スペース</td>
+          </tr>
+          <tr>
+            <td id="tetris-togglePause-button" class="tetris-button">ポーズ＝ p</td>
+          </tr>
+          <tr><td id="tetris-restart-button" class="tetris-button">リスタート＝ r</td></tr>
+        </table>
+      </span>
+    </span>
+  </div>
+  <script>
+    var tetris = new Tetris();
+    tetris.startGame();
+  </script>
+</body>
+
+</html>
