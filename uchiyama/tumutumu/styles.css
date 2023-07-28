@@ -1,0 +1,92 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+form label, button {
+  display: block;
+  margin-top: 10px;
+  color: #555;
+}
+
+input[type="number"], button {
+  padding: 6px;
+  border: none;
+  border-radius: 4px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+button {
+  margin-top: 20px;
+  background-color: #f23d3d;
+  color: white;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.illustrations {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  align-items: flex-end
+}
+
+.illustrations > div {
+  width: 40%;
+}
+
+#note-stack-illustration {
+  height: 0;
+  background-color: #f23d3d;
+  transition: height 0.5s;
+}
+
+#pen-illustration {
+  height: 3cm;
+  width: 1cm;
+  background-color: #000;
+  transition: height 0.5s;
+}
+
+.textbook{
+  display: flex;
+  justify-content: space-between;
+}
+
+.summary {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.details {
+  margin-bottom: 20px;
+}
+
+.details h3 {
+  margin-bottom: 10px;
+}
+
+.buttons {
+  text-align: center;
+}
+
+.buttons button {
+  margin-right: 10px;
+}

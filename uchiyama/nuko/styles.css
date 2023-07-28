@@ -1,0 +1,45 @@
+body {
+  font-family: "Nico Moji", sans-serif;
+  margin: 20px;
+}
+
+textarea {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 10px;
+}
+
+.buttons{
+  display: flex;
+}
+
+#convertButton{
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #3d6fb1 ;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#resetButton{
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #ffffff ;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+.result{
+  display: flex;
+  justify-content: space-around;
+}
+
+#output {
+  margin-top: 30px;
+  font-weight: bold;
+}
+

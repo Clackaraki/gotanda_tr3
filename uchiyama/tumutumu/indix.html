@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>積み上げ記録帳</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>積み上げ記録帳</h1>
+    <form id="input-form">
+      <label for="start-year">期間:</label>
+      <input type="number" id="start-year" name="start-year" placeholder="開始年" min="1" required>年
+      <input type="number" id="start-month" name="start-month" placeholder="開始月" min="1" max="12" required>月
+      〜
+      <input type="number" id="end-year" name="end-year" placeholder="終了年" min="1" required>年
+      <input type="number" id="end-month" name="end-month" placeholder="終了月" min="1" max="12" required>月
+
+      <label for="textbook">教科書:</label>
+      <input type="number" id="textbook" name="textbook" placeholder="教科書のページ数" required>ページ
+
+      <label for="reference">参考書:</label>
+      <input type="number" id="reference" name="reference" placeholder="参考書のページ数" required>ページ
+
+      <label for="exercise">問題集:</label>
+      <input type="number" id="exercise" name="exercise" placeholder="問題集のページ数" required>ページ
+
+      <label for="note">ノート:</label>
+      <input type="number" id="note" name="note" placeholder="ノートのページ数" required>ページ
+
+      <label for="other">その他:</label>
+      <input type="number" id="other" name="other" placeholder="その他のページ数" required>ページ
+
+      <button type="submit">計算</button>
+    </form>
+
+    <div id="result" class="hidden">
+      <h2>積み上げ表示</h2>
+
+      <div class="illustrations">
+        <div id="note-stack-illustration"></div>
+        <div id="pen-illustration"></div>
+      </div>
+      <div class="textbook">
+        <h3>あなたの積み上げ</h3>
+        <h3>ボールペンの長さ</h3>
+      </div>
+
+
+      <div class="summary">
+        <p id="period"></p>
+        <p id="total-pages"></p>
+      </div>
+      <div class="details">
+        <h3>ページ数の詳細</h3>
+        <ul id="page-details"></ul>
+      </div>
+      <div class="buttons">
+        <button id="recalculate-button">もう一度計算する</button>
+        <button id="share-button">Twitterで共有</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
