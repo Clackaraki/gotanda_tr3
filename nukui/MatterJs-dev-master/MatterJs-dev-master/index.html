@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>「Matter.js」で物理演算を実装してみる</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="js/matter-0.8.0.min.js"></script>
+	<style type="text/css">
+		#canvas-container {
+			width: 100%;
+			height: 100vh;
+			overflow: hidden;
+		}
+
+		/* #canvas-container canvas {
+			background: url(./images/texture.png) repeat !important;
+		} */
+	</style>
+</head>
+
+<body>
+	<div id="canvas-container">
+	</div>
+	<script type="text/javascript">
+		console.log("aaaaaa");
+		(function () {
+			var Engine = Matter.Engine,
+				Render = Matter.Render,
+				World = Matter.World,
+				Bodies = Matter.Bodies,
+				MouseConstraint = Matter.MouseConstraint;
+
+			var container = document.getElementById('canvas-container');
+			// var canvas = document.getElementById('canvas');
+			var engine = Engine.create(container, {
+				render: {
+					options: {
+						wireframes: false,
+						width: window.innerWidth,
+						height:window.innerHeight,
+						background: 'rgb(255,255,255)'
+					}
+				}
+			});
+			var mouseConstraint = MouseConstraint.create(engine);
+			World.add(engine.world, mouseConstraint);
+			console.log("bbbb")
+				Bodies.rectangle(window.innerWidth / 2, window.innerHeight - 20, window.innerWidth, 40, {
+					isStatic: true,
+					render: {
+						fillStyle: '#977559',
+						strokeStyle: 'rgba(0, 0, 0, 0)',
+						lineWidth: 0
+					}
+				});
+
+			var objects = [];
+
+			for (var i = 0; i < 10; i++) {
+				var rnd = parseInt(Math.random() * 10);
+				var x = Math.random() * window.innerWidth;
+				var y = -Math.random() * window.innerHeight;
+				
+				var object1 = Bodies.circle(x, y, 60, {
+					density: 0.0005,
+					frictionAir: 0.06,
+					restitution: 1,
+					friction: 0.01,
+					render: {
+						sprite: {
+							texture: 'https://pics.prcm.jp/dc3ee491f5fda/49674712/gif/49674712.gif'
+						}
+					},
+					timeScale: 1.5
+				});
+				var object2 = Bodies.rectangle(x, y, 160, 32, {
+					render: {
+						sprite: {
+							// texture: 'file:///Breadcrumbsmy-first_app/MatterJs-dev-master/images/mb1.png '
+						}
+					}
+				});
+
+				objects.push(object1, object2);
+			}
+
+			World.add(engine.world, objects);
+			Engine.run(engine);
+			window.addEventListener('resize', function () {
+				Render.setPixelRatio(engine.render, window.devicePixelRatio);
+				Render.setSize(engine.render, window.innerWidth, window.innerHeight);
+				Engine.update(engine, engine.delta);
+			});
+		})();
+	</script>
+</body>
+
+</html>
