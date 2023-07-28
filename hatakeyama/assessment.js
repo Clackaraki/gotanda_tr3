@@ -1,5 +1,5 @@
 'use strict';
-const userNameInput = document.getElementById('user-name');
+const userNameInput = document.getElementById('myInputField');
 const assessmentButton = document.getElementById('assessment');
 const resultDivision = document.getElementById('result-area');
 const tweetDivision = document.getElementById('tweet-area');
