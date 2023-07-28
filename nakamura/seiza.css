@@ -1,0 +1,59 @@
+body{
+ 
+  background-image:url(image/seiza-picture.jpg);
+  color:ghostwhite;
+}
+.container{
+  display: flex;
+}
+.item1,                 
+.item2{
+  flex: 1;
+}
+
+
+.item1 img{
+  width: 100%;
+}
+.item2 img{
+  width: 100%;
+}
+.size{
+  font-size:150%;
+}
+
+
+.full {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: url(image/seiza-picture.jpg)
+    center / cover;
+
+ text-align:center;
+  height:60px;
+  line-height:700px;
+  font-size:500%;
+
+  font-weight:bold;
+   text-shadow: 
+    0 0.05em 0.08em rgba(189, 185, 185, 0.7);
+}
+
+.daimei{
+  text-align:right
+}
+
+
+
+a {
+  color:rgb(0, 191, 255);
+  text-decoration:underline;
+  }
+
+
+
+
+
+
+
