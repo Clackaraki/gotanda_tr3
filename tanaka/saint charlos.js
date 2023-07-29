@@ -32,7 +32,7 @@ function update() {
   frameCount++;
   document.getElementById('character').style.width = characterSize + "px";
   document.getElementById('character').style.height = characterSize + "px";
-  characterSize -= 1.5;  
+  characterSize -= 2;
   if (frameCount === 8) { // 5フレームごとに画像を切り替える
     frameCount = 0;
   }
@@ -74,7 +74,7 @@ function update2() {
   frameCount2++;
   document.getElementById('character').style.width = characterSize + "px";
   document.getElementById('character').style.height = characterSize + "px";
-  characterSize += 1.5; 
+  characterSize += 2; 
   if (frameCount2 === 6) { // 5フレームごとに画像を切り替える
     frameCount2 = 0;
   }
