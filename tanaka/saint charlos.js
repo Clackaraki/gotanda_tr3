@@ -4,7 +4,7 @@ var frameCount = 0;
 var gameloop;
 var frameCount2 = 0;
 var gameloop2;
-var characterSize = 100; // キャラクターのサイズを設定
+var characterSize = 200;
 
 addEventListener("keydown", keydownfunc);
 
@@ -24,76 +24,67 @@ function keydownfunc(event) {
   }
 
   document.getElementById('character').style.top = y + "px";
-  document.getElementById('character').style.height = characterSize + "px"; // キャラクターのサイズを設定
 }
 
 
 
 function update() {
   frameCount++;
+  document.getElementById('character').style.width = characterSize + "px";
+  document.getElementById('character').style.height = characterSize + "px";
+  characterSize -= 1.5;  
   if (frameCount === 8) { // 5フレームごとに画像を切り替える
     frameCount = 0;
-    y -= 5;
-    characterSize -= 2; // キャラクターのサイズを2ピクセルずつ小さくする
   }
   if (frameCount === 1){
     document.getElementById('character').src = '7.png';
     y -= 5;
-    characterSize -= 2; // キャラクターのサイズを2ピクセルずつ小さくする
   }
   if (frameCount === 2){
   document.getElementById('character').src = '8.png';
   y -= 5;
-  characterSize -= 2; // キャラクターのサイズを2ピクセルずつ小さくする
   }
   if (frameCount === 3){
     document.getElementById('character').src = '9.png';
     y -= 5;
-    characterSize -= 2; // キャラクターのサイズを2ピクセルずつ小さくする
   }
   if (frameCount === 4){
     document.getElementById('character').src = '10.png';
     y -= 5;
-    characterSize -= 2; // キャラクターのサイズを2ピクセルずつ小さくする
   }
   if (frameCount === 5){
     document.getElementById('character').src = '11.png';
     y -= 5;
-    characterSize -= 2; // キャラクターのサイズを2ピクセルずつ小さくする
   }
   if (frameCount === 6){
     document.getElementById('character').src = '12.png';
     y -= 5;
-    characterSize -= 2; // キャラクターのサイズを2ピクセルずつ小さくする
   }
   if (frameCount === 7){
     document.getElementById('character').src = '13.png';
     y -= 5;
-    characterSize -= 2; // キャラクターのサイズを2ピクセルずつ小さくする
   }
   if (frameCount === 0){
     document.getElementById('character').src = '14.png';
     y -= 5;
-    characterSize -= 2; // キャラクターのサイズを2ピクセルずつ小さくする
   }
 }
 
 function update2() {
   frameCount2++;
+  document.getElementById('character').style.width = characterSize + "px";
+  document.getElementById('character').style.height = characterSize + "px";
+  characterSize += 1.5; 
   if (frameCount2 === 6) { // 5フレームごとに画像を切り替える
     frameCount2 = 0;
-    y += 5;
-    characterSize += 2;// キャラクターのサイズを2ピクセルずつ大きくする
   }
   if (frameCount2 === 1){
     document.getElementById('character').src = '1.png';
     y += 5;
-    characterSize += 2;// キャラクターのサイズを2ピクセルずつ大きくする
   }
   if (frameCount2 === 2){
   document.getElementById('character').src = '2.png';
   y += 5;
-  characterSize += 2;// キャラクターのサイズを2ピクセルずつ大きくする
   }
   if (frameCount2 === 3){
     document.getElementById('character').src = '3.png';
@@ -102,17 +93,14 @@ function update2() {
   if (frameCount2 === 4){
     document.getElementById('character').src = '4.png';
     y += 5;
-    characterSize += 2;// キャラクターのサイズを2ピクセルずつ大きくする
   }
   if (frameCount2 === 5){
     document.getElementById('character').src = '5.png';
     y += 5;
-    characterSize += 2;// キャラクターのサイズを2ピクセルずつ大きくする
   }
   if (frameCount2 === 0){
     document.getElementById('character').src = '6.png';
     y += 5;
-    characterSize += 2;// キャラクターのサイズを2ピクセルずつ大きくする
   }
 }
 document.addEventListener("keyup", () => {
@@ -120,7 +108,6 @@ document.addEventListener("keyup", () => {
   stopUpdate();
   stopUpdate2();
   document.getElementById('character').src = '0.png';
-  document.getElementById('character').style.height = "100px";
 });
 
 // どのキーも押されていない場合の処理
