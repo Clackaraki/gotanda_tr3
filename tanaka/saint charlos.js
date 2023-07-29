@@ -4,6 +4,7 @@ var frameCount = 0;
 var gameloop;
 var frameCount2 = 0;
 var gameloop2;
+var characterSize = 100; // キャラクターのサイズを設定
 
 addEventListener("keydown", keydownfunc);
 
