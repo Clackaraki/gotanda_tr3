@@ -1,11 +1,11 @@
-function start() {
-    target = document.getElementById("fun");
+function start(){
+  target = document.getElementById("fun");
 }
+
 let fun = document.getElementById("fun");
 let degree = 0;
 function fundegree(){
-    degree = degree + 6;
-    fun.style.transform = 'rotatez(' + degree + 'deg)';
+degree = degree+6;
+fun.style.transform = 'rotateZ('+ degree + 'deg)';
 }
-
-setInterval(fundegree, 20);　
+setInterval(fundegree,20);

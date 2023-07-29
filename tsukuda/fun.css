@@ -1,13 +1,13 @@
 .fun{
-    display: block;
-    width: 30rem;
-    margin: 0 auto;
-    margin-top: 5rem;
-    padding-left: 0rem;
-    padding-right: 0rem;
+  display:block;
+  width:30rem;
+  margin: 0 auto;
+  margin-top: 5rem;
+  padding-left: 0rem;
+  padding-right: 0rem;
+}
+.choice{
+  border-style:solid;
+  margin-left: 5rem;
 }
 
-.choice {
-    border-style: solid;
-    margin: left 5rem;
-}
