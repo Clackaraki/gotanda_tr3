@@ -136,6 +136,7 @@ body{
     padding-top: 75%;
     filter: drop-shadow(0 0 10px #0003);
     perspective: 100px;
+    background-image: url();
   }
   
   .carousel__viewport {
@@ -155,7 +156,7 @@ body{
     position: relative;
     flex: 0 0 100%;
     width: 100%;
-    background-color: #f99;
+    background-image: url('https://favy-tokyo.s3.amazonaws.com/uploads/topic/image/11539/retina_pixta_10755361_S.jpg');
     counter-increment: item;
   }
   
