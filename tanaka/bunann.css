@@ -1,0 +1,15 @@
+#character {
+  position: absolute;
+  top: 440px;
+  left: 620px;
+  width: 200px;
+}
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image:url("road.png");
+  background-repeat: no-repeat;
+  background-position:50% 50%;
+  background-size: cover;
+}
